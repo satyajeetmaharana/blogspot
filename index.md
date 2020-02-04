@@ -1,4 +1,4 @@
-## A quick Apache Spark tutorial
+# A quick Apache Spark tutorial
 
 ## Using Spark on your local machine
 
