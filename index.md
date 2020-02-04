@@ -33,7 +33,7 @@ hdfs dfs -mkdir funny_input                           -- Create a new directory
 hdfs dfs -put cs_fun.txt funny_input                  -- Put your file into HDFS
 hdfs dfs -cat funny_input/cs_fun.txt                  -- Output the contents of your HDFS file
 cat cs_fun.txt                                        -- Output the contents of your local file
-```
+
 
 
 -- Get the file from HDFS and store it locally into new_copy_from_hdfs.txt: 
@@ -41,7 +41,7 @@ hdfs dfs -get funny_input/cs_fun.txt new_copy_from_hdfs.txt
 
 cat new_copy_from_hdfs.txt -- View the new local version of the file 
 diff cs_fun.txt new_copy_from_hdfs.txt -- The two files should be the same
-
+```
 
 
 ### Markdown
