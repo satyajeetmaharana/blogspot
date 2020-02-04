@@ -44,34 +44,45 @@ diff cs_fun.txt new_copy_from_hdfs.txt -- The two files should be the same
 ```
 
 
-### Markdown
+## Start Spark REPL
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Verify that the Spark REPL (shell) is working in your virtual environment.
 
-```markdown
-Syntax highlighted code block
+In the already open terminal window type the following command to start the Spark shell - you shouldn't see any errors (warnings can be ignored):
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+$ spark-shell     — Start the Scala version of the Spark REPL
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+... After some output from the shell, you should see a scala> prompt ...
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/satyajeetmaharana/blogspot/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Type the following commands and take a screenshot to show that your Spark environment is working. Upload the screenshot to NYU Classes:
 
-### Support or Contact
+```
+scala> :help                            -- In the Spark shell, try the help command
+scala> sc[TAB]                          -- View the commands available in the Spark Context (sc)
+scala> sc.version                       -- View the version of Spark that is running in the shell
+scala> val myConstant: Int = 2016
+scala> myConstant
+scala> my[TAB]
+scala> myConstant.[TAB]
+scala> myConstant.to[TAB]
+scala> myConstant.toFloat
+scala> myConstant                       -- Note that myConstant has not changed; it’s still an Int
+scala> myConstant.toFloat.toInt
+scala> val myString = myConstant        -- Note the type inferred for myString
+scala> :type val myString2 = myConstant -- Use the :type command to view the type that is inferred for myString2
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```
+
+
+
+## Some Resources
+
+1. “MapReduce: Simplified Data Processing on Large Clusters”, Dean and Ghemawat, OSDI 2004.
+http://static.usenix.org/event/osdi04/tech/full_papers/dean/dean.pdf
+Describes how the MapReduce paradigm was implemented by Google. This work was the inspiration for Hadoop MapReduce (Hadoop’s open source implementation of the MapReduce paradigm).
+
+2. “The Google File System”, by Ghemawat, Gobioff, and Leung. http://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf
+Read sections 1 and 2 at least. You will notice a difference in terminology when compared with HDFS; GFS was the inspiration for the open source Hadoop Distributed File System, HDFS.
