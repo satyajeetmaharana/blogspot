@@ -2,16 +2,25 @@
 
 ## Using Spark on your local machine
 
-Download the Cloudera Quickstart VM (recommend using VirtualBox because the trial license is long):
+I prefer using the VirtualBox VM. You can download it here : 
+  https://www.virtualbox.org/
+  
+Download the Cloudera Quickstart VM :
   https://www.cloudera.com/downloads/quickstart_vms/5-10.html
+  
+  
+  
+  
+The recommended system requirements for running Cloudera VM are:
 
-You will also need to install VirtualBox if you don’t already have it.
+| CDH and Cloudera Manager Version | RAM Required by VM |
+|:--------------------------------:|:------------------:|
+|          CDH 5 (default)         |       4+ GB      |
+|         Cloudera Express         |       8+ GB      |
+|    Cloudera Enterprise (trial)   |      12+ GB      |
 
-Everything you need in order to complete the below Spark snippets is already installed in the VM (Hadoop-HDFS, Spark, Spark shells for Scala and Python, etc.).
 
-
-* Please make sure your host machine meets the memory requirements posted on the VM website.
-
+Most of the modules needed for the following Spark snippets is already installed in the VM (Hadoop-HDFS, Spark, Spark shells for Scala and Python, etc.).
 
 ## Try Hadoop Commands
 
